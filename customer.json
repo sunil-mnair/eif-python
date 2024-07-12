@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Alice",
+    "Age": 30,
+    "Membership": "Gold"
+  },
+  {
+    "Name": "John Doe",
+    "Age": 27,
+    "Membership": "Bronze"
+  },
+  {
+    "Name": "Sunil Nair",
+    "Age": 40,
+    "Membership": "Bronze"
+  },
+  {
+    "Name": "Jane Doe",
+    "Age": 23,
+    "Membership": "Gold"
+  }
+]
