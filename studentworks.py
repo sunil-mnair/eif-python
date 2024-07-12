@@ -2,22 +2,26 @@ import json
 # Student Registration
 
 class Student:
-    def __init__(self,name=None,id=None):
+    def __init__(self,name=None,id=None,filename='student.json'):
         self.name = name
         self.id = id
+        self.filename = filename
+        self.students = self.load_students()
+
+    def load_students(self):
+        # Read Existing Student File
+        with open(self.filename) as f:
+            return json.load(f)
 
     def save_student(self,name,id):
         self.name = name
         self.id = id
-        # Read Existing Student File
-        with open("student.json") as f:
-            students = json.load(f)
         
-        students.append({"name":self.name,"id":self.id})
+        self.students.append({"name":self.name,"id":self.id})
         
         # Write to File
-        with open("student.json","w") as f:
-            json.dump(students,f,indent=2)
+        with open(self.filename,"w") as f:
+            json.dump(self.students,f,indent=2)
         
         print(f"{self.name} successfully registered")
 

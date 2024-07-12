@@ -1,6 +1,8 @@
 from studentworks import Student
 
+# Object
 newStudent = Student()
+print(newStudent.students)
 
 print("Student Registration")
 while True:
